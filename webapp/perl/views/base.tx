@@ -10,7 +10,6 @@ body {
 }
 </style>
 <link rel="stylesheet" href="<: $c.stash.uri_root :>css/bootstrap-responsive.min.css">
-<link rel="stylesheet" href="/">
 </head>
 <body>
 <div class="navbar navbar-fixed-top">
