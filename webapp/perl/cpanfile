@@ -11,3 +11,5 @@ requires "Plack::Session";
 requires "Cache::Memcached::Fast";
 requires "Server::Starter";
 requires "Net::Server::SS::PreFork";
+requires "DDP";
+requires "DBIx::QueryLog";

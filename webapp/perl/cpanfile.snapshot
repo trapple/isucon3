@@ -60,6 +60,17 @@ DISTRIBUTIONS
       File::Spec 0.80
       Test::More 0.47
       perl 5.006
+  Clone-PP-1.06
+    pathname: N/NE/NEILB/Clone-PP-1.06.tar.gz
+    provides:
+      Clone::PP 1.06
+    requirements:
+      Exporter 0
+      ExtUtils::MakeMaker 0
+      perl 5.006
+      strict 0
+      vars 0
+      warnings 0
   DBD-SQLite-1.40
     pathname: I/IS/ISHIGAKI/DBD-SQLite-1.40.tar.gz
     provides:
@@ -186,6 +197,19 @@ DISTRIBUTIONS
       ExtUtils::MakeMaker 6.48
       Test::Simple 0.90
       perl 5.008
+  DBIx-QueryLog-0.39
+    pathname: X/XA/XAICRON/DBIx-QueryLog-0.39.tar.gz
+    provides:
+      DBIx::QueryLog 0.39
+    requirements:
+      DBI 0
+      Data::Dumper 0
+      ExtUtils::MakeMaker 6.59
+      Module::Build 0.38
+      Term::ANSIColor 0
+      Text::ASCIITable 0
+      Time::HiRes 0
+      perl 5.008001
   DBIx-Sunny-0.21
     pathname: K/KA/KAZEBURO/DBIx-Sunny-0.21.tar.gz
     provides:
@@ -244,6 +268,29 @@ DISTRIBUTIONS
       Test::Requires 0
       XSLoader 0.02
       perl 5.008001
+  Data-Printer-0.35
+    pathname: G/GA/GARU/Data-Printer-0.35.tar.gz
+    provides:
+      DDP undef
+      Data::Printer 0.35
+      Data::Printer::Filter undef
+      Data::Printer::Filter::DB undef
+      Data::Printer::Filter::DateTime undef
+      Data::Printer::Filter::Digest undef
+    requirements:
+      Carp 0
+      Clone::PP 0
+      ExtUtils::MakeMaker 0
+      Fcntl 0
+      File::HomeDir 0.91
+      File::Spec 0
+      File::Temp 0
+      Package::Stash 0.3
+      Scalar::Util 0
+      Sort::Naturally 0
+      Term::ANSIColor 3
+      Test::More 0.88
+      version 0.77
   Data-Section-Simple-0.05
     pathname: M/MI/MIYAGAWA/Data-Section-Simple-0.05.tar.gz
     provides:
@@ -312,6 +359,18 @@ DISTRIBUTIONS
       Digest::base 1.00
       ExtUtils::MakeMaker 0
       perl 5.004
+  Dist-CheckConflicts-0.11
+    pathname: D/DO/DOY/Dist-CheckConflicts-0.11.tar.gz
+    provides:
+      Dist::CheckConflicts 0.11
+    requirements:
+      Carp 0
+      Exporter 0
+      ExtUtils::MakeMaker 6.30
+      Module::Runtime 0.009
+      base 0
+      strict 0
+      warnings 0
   Encode-Locale-1.03
     pathname: G/GA/GAAS/Encode-Locale-1.03.tar.gz
     provides:
@@ -378,6 +437,30 @@ DISTRIBUTIONS
       ExtUtils::MakeMaker 0
       File::Copy 0
       File::Spec 0
+  File-HomeDir-1.00
+    pathname: A/AD/ADAMK/File-HomeDir-1.00.tar.gz
+    provides:
+      File::HomeDir 1.00
+      File::HomeDir::Darwin 1.00
+      File::HomeDir::Darwin::Carbon 1.00
+      File::HomeDir::Darwin::Cocoa 1.00
+      File::HomeDir::Driver 1.00
+      File::HomeDir::FreeDesktop 1.00
+      File::HomeDir::MacOS9 1.00
+      File::HomeDir::TIE 1.00
+      File::HomeDir::Test 1.00
+      File::HomeDir::Unix 1.00
+      File::HomeDir::Windows 1.00
+    requirements:
+      Carp 0
+      Cwd 3.12
+      ExtUtils::MakeMaker 6.36
+      File::Path 2.01
+      File::Spec 3.12
+      File::Temp 0.19
+      File::Which 0.05
+      Test::More 0.47
+      perl 5.00503
   File-Listing-6.04
     pathname: G/GA/GAAS/File-Listing-6.04.tar.gz
     provides:
@@ -410,6 +493,17 @@ DISTRIBUTIONS
       ExtUtils::MakeMaker 6.11
       File::Spec 0
       IO::Dir 0
+  File-Which-1.09
+    pathname: A/AD/ADAMK/File-Which-1.09.tar.gz
+    provides:
+      File::Which 1.09
+    requirements:
+      Exporter 0
+      ExtUtils::MakeMaker 0
+      File::Spec 0.60
+      Getopt::Std 0
+      Test::More 0.80
+      Test::Script 1.05
   Filesys-Notify-Simple-0.12
     pathname: M/MI/MIYAGAWA/Filesys-Notify-Simple-0.12.tar.gz
     provides:
@@ -594,6 +688,14 @@ DISTRIBUTIONS
       File::Temp 0
       Scalar::Util 0
       Test::More 0.88
+  IPC-Run3-0.048
+    pathname: R/RJ/RJBS/IPC-Run3-0.048.tar.gz
+    provides:
+      IPC::Run3 0.048
+    requirements:
+      ExtUtils::MakeMaker 0
+      Test::More 0.31
+      Time::HiRes 0
   JSON-2.59
     pathname: M/MA/MAKAMAKA/JSON-2.59.tar.gz
     provides:
@@ -682,6 +784,27 @@ DISTRIBUTIONS
       JSON::PP 2
       Pod::Man 0
       TAP::Harness 0
+      perl 5.006
+      strict 0
+      warnings 0
+  Module-Implementation-0.09
+    pathname: D/DR/DROLSKY/Module-Implementation-0.09.tar.gz
+    provides:
+      Module::Implementation 0.09
+    requirements:
+      Carp 0
+      ExtUtils::MakeMaker 0
+      Module::Runtime 0.012
+      Try::Tiny 0
+      strict 0
+      warnings 0
+  Module-Runtime-0.014
+    pathname: Z/ZE/ZEFRAM/Module-Runtime-0.014.tar.gz
+    provides:
+      Module::Runtime 0.014
+    requirements:
+      Module::Build 0
+      Test::More 0
       perl 5.006
       strict 0
       warnings 0
@@ -792,6 +915,37 @@ DISTRIBUTIONS
       ExtUtils::MakeMaker 0
       POSIX 0
       Test::More 0
+  Package-Stash-0.37
+    pathname: D/DO/DOY/Package-Stash-0.37.tar.gz
+    provides:
+      Package::Stash 0.37
+      Package::Stash::PP 0.37
+    requirements:
+      B 0
+      Carp 0
+      Config 0
+      Dist::CheckConflicts 0.02
+      ExtUtils::MakeMaker 0
+      File::Spec 0
+      Getopt::Long 0
+      Module::Implementation 0.06
+      Package::Stash::XS 0.26
+      Scalar::Util 0
+      Symbol 0
+      Text::ParseWords 0
+      constant 0
+      strict 0
+      warnings 0
+  Package-Stash-XS-0.28
+    pathname: D/DO/DOY/Package-Stash-XS-0.28.tar.gz
+    provides:
+      CompileTime undef
+      Package::Stash::XS 0.28
+    requirements:
+      ExtUtils::MakeMaker 6.30
+      XSLoader 0
+      strict 0
+      warnings 0
   Plack-1.0029
     pathname: M/MI/MIYAGAWA/Plack-1.0029.tar.gz
     provides:
@@ -917,6 +1071,15 @@ DISTRIBUTIONS
       Digest::SHA1 0
       Module::Build::Tiny 0.023
       Plack 0.9910
+  Probe-Perl-0.03
+    pathname: K/KW/KWILLIAMS/Probe-Perl-0.03.tar.gz
+    provides:
+      Probe::Perl 0.03
+    requirements:
+      Config 0
+      ExtUtils::MakeMaker 6.30
+      File::Spec 0
+      strict 0
   Proc-Wait3-0.04
     pathname: C/CT/CTILMES/Proc-Wait3-0.04.tar.gz
     provides:
@@ -960,6 +1123,13 @@ DISTRIBUTIONS
       Scope::Guard 0
       Test::TCP 2.00
       perl 5.008
+  Sort-Naturally-1.03
+    pathname: B/BI/BINGOS/Sort-Naturally-1.03.tar.gz
+    provides:
+      Sort::Naturally 1.03
+    requirements:
+      ExtUtils::MakeMaker 0
+      perl 5
   Starman-0.4008
     pathname: M/MI/MIYAGAWA/Starman-0.4008.tar.gz
     provides:
@@ -1068,6 +1238,19 @@ DISTRIBUTIONS
       Test::Builder::Module 0
       Test::More 0.61
       perl 5.008_001
+  Test-Script-1.07
+    pathname: A/AD/ADAMK/Test-Script-1.07.tar.gz
+    provides:
+      Test::Script 1.07
+    requirements:
+      ExtUtils::MakeMaker 6.42
+      File::Spec 0.80
+      IPC::Run3 0.034
+      Probe::Perl 0.01
+      Test::Builder 0.32
+      Test::Builder::Tester 1.02
+      Test::More 0.62
+      blib 0
   Test-SharedFork-0.21
     pathname: T/TO/TOKUHIROM/Test-SharedFork-0.21.tar.gz
     provides:
@@ -1107,6 +1290,15 @@ DISTRIBUTIONS
     requirements:
       ExtUtils::MakeMaker 0
       Test::Builder 0
+  Text-ASCIITable-0.20
+    pathname: L/LU/LUNATIC/Text-ASCIITable-0.20.tar.gz
+    provides:
+      Text::ASCIITable undef
+    requirements:
+      Carp 0
+      Encode 0
+      List::Util 0
+      perl v5.6.0
   Text-Xslate-2.0009
     pathname: G/GF/GFUJI/Text-Xslate-2.0009.tar.gz
     provides:
