@@ -4,5 +4,6 @@ tmp
 .pki
 .bash_history
 .viminfo
-local/
 .xslate_cache/
+.cpanm
+local
