@@ -57,6 +57,8 @@ filter 'session' => sub {
         my $sid = $c->req->env->{"psgix.session.options"}->{id};
         $c->stash->{session_id} = $sid;
         $c->stash->{session}    = $c->req->env->{"psgix.session"};
+
+        $c->stash->{uri_root} = $c->req->uri_for('/');
         $app->($self, $c);
     };
 };
