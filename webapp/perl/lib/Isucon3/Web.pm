@@ -140,8 +140,13 @@ get '/recent/:page' => [qw(session get_user)] => sub {
     my $total = $self->dbh->select_one(
         'SELECT count(*) FROM memos WHERE is_private=0'
     );
+    my $ids = $self->dbh->select_all(
+        sprintf("SELECT id FROM memos where is_private = 0 ORDER BY created_at DESC, id DESC LIMIT 100 OFFSET %d", $page * 100)
+    );
+    #my @ids = map { $_->{id} } @$ids;
+    
     my $memos = $self->dbh->select_all(
-        sprintf("SELECT memos.id, memos.title, memos.is_private, memos.created_at,users.username FROM memos JOIN users ON memos.user = users.id WHERE is_private=0 ORDER BY created_at DESC, id DESC LIMIT 100 OFFSET %d", $page * 100)
+        "SELECT memos.id, memos.title, memos.is_private, memos.created_at,users.username FROM memos JOIN users ON memos.user = users.id WHERE memos.id IN (?) ORDER BY memos.created_at DESC, memos.id DESC", [map { $_->{id} } @$ids]
     );
     if ( @$memos == 0 ) {
         return $c->halt(404);
