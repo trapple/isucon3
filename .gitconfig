@@ -1,0 +1,10 @@
+[user]
+	email = trapplejp@gmail.com
+	name = trapple
+[color]
+	ui = auto
+[alias]
+  st = status
+	co = checkout
+	ci = commit
+	di = diff
