@@ -236,10 +236,12 @@ get '/mypage' => [qw(session get_user require_user)] => sub {
 post '/memo' => [qw(session get_user require_user anti_csrf)] => sub {
     my ($self, $c) = @_;
 
+    my $content = scalar $c->req->param('content');
     $self->dbh->query(
-        'INSERT INTO memos (user, content, is_private, created_at) VALUES (?, ?, ?, now())',
+        'INSERT INTO memos (user, content, title, is_private, created_at) VALUES (?, ?, ?, ?, now())',
         $c->stash->{user}->{id},
-        scalar $c->req->param('content'),
+        $content,
+	(split /\r?\n/, $content)[0],
         scalar($c->req->param('is_private')) ? 1 : 0,
     );
     my $memo_id = $self->dbh->last_insert_id;

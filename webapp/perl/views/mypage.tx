@@ -14,7 +14,7 @@
 <ul>
 : for $memos -> $memo {
 <li>
-  <a href="<: $c.stash.uri_root :>memo/<: $memo.id :>"><: $memo.content.split('\r?\n').first() :></a> <: $memo.created_at :>
+  <a href="<: $c.stash.uri_root :>memo/<: $memo.id :>"><: $memo.title :></a> <: $memo.created_at :>
 :   if $memo.is_private {
 [private]
 :   }
