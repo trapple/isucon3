@@ -12,6 +12,7 @@ use File::Temp qw/ tempfile /;
 use IO::Handle;
 use Encode;
 use Time::Piece;
+use DDP;
 
 sub load_config {
     my $self = shift;
@@ -69,12 +70,18 @@ filter 'get_user' => sub {
         my ($self, $c) = @_;
 
         my $user_id = $c->req->env->{"psgix.session"}->{user_id};
-        my $user = $self->dbh->select_row(
-            'SELECT * FROM users WHERE id=?',
-            $user_id,
-        );
-        $c->stash->{user} = $user;
-        $c->res->header('Cache-Control', 'private') if $user;
+        if ($user_id) {
+          my $user = +{
+            id       => $user_id,
+            username => $c->req->env->{"psgix.session"}->{username}
+          };
+          #my $user = $self->dbh->select_row(
+          #    'SELECT * FROM users WHERE id=?',
+          #    $user_id,
+          #);
+          $c->stash->{user} = $user;
+          $c->res->header('Cache-Control', 'private') if $user;
+        }
         $app->($self, $c);
     }
 };
@@ -201,6 +208,7 @@ post '/signin' => [qw(session)] => sub {
         $c->req->env->{"psgix.session.options"}->{change_id} = 1;
         my $session = $c->req->env->{"psgix.session"};
         $session->{user_id} = $user->{id};
+        $session->{username} = $user->{username};
         $session->{token}   = sha256_hex(rand());
         $self->dbh->query(
             'UPDATE users SET last_access=now() WHERE id=?',
