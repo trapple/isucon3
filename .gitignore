@@ -7,3 +7,5 @@ tmp
 .xslate_cache/
 .cpanm
 local
+.mysql_history
+.lesshst
