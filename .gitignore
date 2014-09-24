@@ -4,3 +4,4 @@ tmp
 .pki
 .bash_history
 .viminfo
+local/
