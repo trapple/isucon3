@@ -13,3 +13,5 @@ requires "Server::Starter";
 requires "Net::Server::SS::PreFork";
 requires "DDP";
 requires "DBIx::QueryLog";
+requires "Text::Markdown";
+requires "Text::Markdown::Discount";
