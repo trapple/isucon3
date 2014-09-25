@@ -1,10 +1,5 @@
 #!/bin/bash
 
-HOME=/home/isucon
-PATH=$HOME/local/perl-5.18/bin:$PATH:$HOME/bin
-export PATH 
-
-
 DIR="$(cd "$(dirname "${BASH_SOURCE:-$0}")"; pwd)"
 
 SQL=()
@@ -21,5 +16,4 @@ done
 PERL_CARTON_CPANFILE=/home/isucon/webapp/perl/cpanfile
 cd $DIR/../webapp/perl
 carton exec mysql-warmup isucon -u isucon  1>/dev/null 2>/dev/null
-carton exec perl $DIR/../script/load_username.pl
 exit 0
