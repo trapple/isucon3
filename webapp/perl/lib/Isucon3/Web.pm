@@ -14,6 +14,9 @@ use Encode;
 use Time::Piece;
 use Text::Markdown::Discount qw/markdown/;
 use DDP;
+use Cache::Memcached::Fast;
+
+my $memd = Cache::Memcached::Fast->new({servers => [ "localhost:11212" ]});
 
 sub load_config {
     my $self = shift;
@@ -120,7 +123,7 @@ get '/' => [qw(session get_user)] => sub {
     #);
     my $total = $self->dbh->select_one('SELECT max(id) FROM public_memos');
     my $memos = $self->dbh->select_all(
-        'SELECT memos.id, memos.title, memos.is_private, memos.created_at,users.username FROM memos JOIN users ON memos.user = users.id WHERE is_private=0 ORDER BY created_at DESC, id DESC LIMIT 100',
+        'SELECT memos.id, memos.user, memos.title, memos.is_private, memos.created_at FROM memos WHERE is_private=0 ORDER BY id DESC LIMIT 100',
     );
     #for my $memo (@$memos) {
     #    $memo->{username} = $self->dbh->select_one(
@@ -128,6 +131,11 @@ get '/' => [qw(session get_user)] => sub {
     #        $memo->{user},
     #    );
     #}
+    for (@$memos) {
+      if(my $username = $memd->get('uid-' . $_->{user}) ){
+        $_->{username} = $username; 
+      }
+    }
     $c->render('index.tx', {
         memos => $memos,
         page  => 0,
@@ -151,10 +159,13 @@ get '/recent/:page' => [qw(session get_user)] => sub {
     #my @ids = map { $_->{id} } @$ids;
     
     my $memos = $self->dbh->select_all(
-        "SELECT memos.id, memos.title, memos.is_private, memos.created_at,users.username FROM memos JOIN users ON memos.user = users.id WHERE memos.id IN (?) ORDER BY memos.created_at DESC, memos.id DESC", [map { $_->{memo} } @$ids]
+        "SELECT memos.id, memos.user, memos.title, memos.is_private, memos.created_at FROM memos WHERE memos.id IN (?) ORDER BY memos.id DESC", [map { $_->{memo} } @$ids]
     );
     if ( @$memos == 0 ) {
         return $c->halt(404);
+    }
+    for (@$memos) {
+      $_->{username} = $memd->get('uid-' . $_->{user}); 
     }
 
     #for my $memo (@$memos) {
