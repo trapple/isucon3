@@ -17,3 +17,4 @@ requires "Text::Markdown";
 requires "Text::Markdown::Discount";
 
 requires "MySQL::Warmer";
+requires "Starlet";

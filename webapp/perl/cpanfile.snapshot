@@ -765,6 +765,12 @@ DISTRIBUTIONS
       ExtUtils::MakeMaker 0
       Test::More 0.31
       Time::HiRes 0
+  IPC-Signal-1.00
+    pathname: R/RO/ROSCH/IPC-Signal-1.00.tar.gz
+    provides:
+      IPC::Signal 1.00
+    requirements:
+      ExtUtils::MakeMaker 0
   Import-Into-1.002004
     pathname: E/ET/ETHER/Import-Into-1.002004.tar.gz
     provides:
@@ -1080,6 +1086,22 @@ DISTRIBUTIONS
       XSLoader 0
       strict 0
       warnings 0
+  Parallel-Prefork-0.17
+    pathname: K/KA/KAZUHO/Parallel-Prefork-0.17.tar.gz
+    provides:
+      Parallel::Prefork 0.17
+      Parallel::Prefork::SpareWorkers undef
+      Parallel::Prefork::SpareWorkers::Scoreboard undef
+    requirements:
+      Class::Accessor::Lite 0.04
+      ExtUtils::MakeMaker 6.42
+      List::MoreUtils 0
+      Proc::Wait3 0.03
+      Scope::Guard 0
+      Signal::Mask 0
+      Test::Requires 0
+      Test::SharedFork 0
+      perl 5.008001
   Plack-1.0029
     pathname: M/MI/MIYAGAWA/Plack-1.0029.tar.gz
     provides:
@@ -1265,6 +1287,18 @@ DISTRIBUTIONS
       Scope::Guard 0
       Test::TCP 2.00
       perl 5.008
+  Signal-Mask-0.008
+    pathname: L/LE/LEONT/Signal-Mask-0.008.tar.gz
+    provides:
+      Signal::Mask 0.008
+      Signal::Pending 0.008
+    requirements:
+      Carp 0
+      ExtUtils::MakeMaker 6.30
+      IPC::Signal 0
+      POSIX 0
+      strict 0
+      warnings 0
   Sort-Naturally-1.03
     pathname: B/BI/BINGOS/Sort-Naturally-1.03.tar.gz
     provides:
@@ -1272,6 +1306,21 @@ DISTRIBUTIONS
     requirements:
       ExtUtils::MakeMaker 0
       perl 5
+  Starlet-0.24
+    pathname: K/KA/KAZUHO/Starlet-0.24.tar.gz
+    provides:
+      Plack::Handler::Starlet undef
+      Starlet 0.24
+      Starlet::Server undef
+    requirements:
+      ExtUtils::MakeMaker 6.42
+      LWP::UserAgent 5.8
+      Parallel::Prefork 0.13
+      Plack 0.992
+      Server::Starter 0.06
+      Test::More 0.88
+      Test::TCP 0.15
+      perl 5.008001
   Starman-0.4008
     pathname: M/MI/MIYAGAWA/Starman-0.4008.tar.gz
     provides:
