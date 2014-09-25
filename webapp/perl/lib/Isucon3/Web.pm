@@ -115,9 +115,10 @@ filter 'anti_csrf' => sub {
 get '/' => [qw(session get_user)] => sub {
     my ($self, $c) = @_;
 
-    my $total = $self->dbh->select_one(
-        'SELECT count(*) FROM memos WHERE is_private=0'
-    );
+    #my $total = $self->dbh->select_one(
+    #    'SELECT count(*) FROM memos WHERE is_private=0'
+    #);
+    my $total = $self->dbh->select_one('SELECT max(id) FROM public_memos');
     my $memos = $self->dbh->select_all(
         'SELECT memos.id, memos.title, memos.is_private, memos.created_at,users.username FROM memos JOIN users ON memos.user = users.id WHERE is_private=0 ORDER BY created_at DESC, id DESC LIMIT 100',
     );
@@ -137,9 +138,10 @@ get '/' => [qw(session get_user)] => sub {
 get '/recent/:page' => [qw(session get_user)] => sub {
     my ($self, $c) = @_;
     my $page  = int $c->args->{page};
-    my $total = $self->dbh->select_one(
-        'SELECT count(*) FROM memos WHERE is_private=0'
-    );
+    #my $total = $self->dbh->select_one(
+    #    'SELECT count(*) FROM memos WHERE is_private=0'
+    #);
+    my $total = $self->dbh->select_one('SELECT max(id) FROM public_memos');
     my $ids = $self->dbh->select_all(
         sprintf("SELECT id FROM memos where is_private = 0 ORDER BY created_at DESC, id DESC LIMIT 100 OFFSET %d", $page * 100)
     );
@@ -250,6 +252,9 @@ post '/memo' => [qw(session get_user require_user anti_csrf)] => sub {
         scalar($c->req->param('is_private')) ? 1 : 0,
     );
     my $memo_id = $self->dbh->last_insert_id;
+    if(!$c->req->param('is_private')){
+        $self->dbh->query('INSERT INTO public_memos (memo) VALUES (?)',  $memo_id);
+    }
     $c->redirect('/memo/' . $memo_id);
 };
 
@@ -284,7 +289,7 @@ get '/memo/:id' => [qw(session get_user)] => sub {
     }
 
     my $memos = $self->dbh->select_all(
-        "SELECT * FROM memos WHERE user=? $cond ORDER BY created_at",
+        "SELECT id FROM memos WHERE user=? $cond ORDER BY created_at",
         $memo->{user},
     );
     my ($newer, $older);

@@ -19,6 +19,17 @@ DISTRIBUTIONS
       POSIX 0
       Time::Local 0
       perl 5.008005
+  B-Hooks-OP-Check-0.19
+    pathname: Z/ZE/ZEFRAM/B-Hooks-OP-Check-0.19.tar.gz
+    provides:
+      B::Hooks::OP::Check 0.19
+      B::Hooks::OP::Check::Install::Files undef
+    requirements:
+      ExtUtils::Depends 0.302
+      ExtUtils::MakeMaker 6.42
+      Test::More 0
+      parent 0
+      perl 5.008001
   Cache-Memcached-Fast-0.21
     pathname: K/KR/KROKI/Cache-Memcached-Fast-0.21.tar.gz
     provides:
@@ -62,6 +73,18 @@ DISTRIBUTIONS
       File::Spec 0.80
       Test::More 0.47
       perl 5.006
+  Class-Method-Modifiers-2.11
+    pathname: E/ET/ETHER/Class-Method-Modifiers-2.11.tar.gz
+    provides:
+      Class::Method::Modifiers 2.11
+    requirements:
+      B 0
+      Carp 0
+      Exporter 0
+      ExtUtils::MakeMaker 0
+      base 0
+      strict 0
+      warnings 0
   Clone-PP-1.06
     pathname: N/NE/NEILB/Clone-PP-1.06.tar.gz
     provides:
@@ -199,6 +222,31 @@ DISTRIBUTIONS
       ExtUtils::MakeMaker 6.48
       Test::Simple 0.90
       perl 5.008
+  DBIx-Inspector-0.12
+    pathname: T/TO/TOKUHIROM/DBIx-Inspector-0.12.tar.gz
+    provides:
+      DBIx::Inspector 0.12
+      DBIx::Inspector::Column undef
+      DBIx::Inspector::Column::Pg undef
+      DBIx::Inspector::Driver::Base undef
+      DBIx::Inspector::Driver::Pg undef
+      DBIx::Inspector::Driver::SQLite undef
+      DBIx::Inspector::Driver::mysql undef
+      DBIx::Inspector::ForeignKey undef
+      DBIx::Inspector::ForeignKey::Pg undef
+      DBIx::Inspector::Iterator undef
+      DBIx::Inspector::Iterator::Null undef
+      DBIx::Inspector::Table undef
+      DBIx::Inspector::Table::Pg undef
+    requirements:
+      CPAN::Meta 0
+      CPAN::Meta::Prereqs 0
+      Class::Accessor::Lite 0.05
+      DBI 0
+      ExtUtils::CBuilder 0
+      Module::Build 0.38
+      Module::Load 0
+      perl 5.008001
   DBIx-QueryLog-0.39
     pathname: X/XA/XAICRON/DBIx-QueryLog-0.39.tar.gz
     provides:
@@ -317,6 +365,15 @@ DISTRIBUTIONS
       Module::Build 0.38
       Mouse 0.93
       perl 5.008001
+  Devel-GlobalDestruction-0.13
+    pathname: H/HA/HAARG/Devel-GlobalDestruction-0.13.tar.gz
+    provides:
+      Devel::GlobalDestruction 0.13
+    requirements:
+      ExtUtils::CBuilder 0.27
+      ExtUtils::MakeMaker 0
+      Sub::Exporter::Progressive 0.001011
+      perl 5.006
   Devel-StackTrace-1.30
     pathname: D/DR/DROLSKY/Devel-StackTrace-1.30.tar.gz
     provides:
@@ -396,6 +453,16 @@ DISTRIBUTIONS
       Test::More 0.88
       strict 0
       warnings 0
+  ExtUtils-Depends-0.401
+    pathname: X/XA/XAOC/ExtUtils-Depends-0.401.tar.gz
+    provides:
+      ExtUtils::Depends 0.401
+    requirements:
+      Data::Dumper 0
+      ExtUtils::MakeMaker 0
+      File::Spec 0
+      IO::File 0
+      perl 5.006
   ExtUtils-Helpers-0.021
     pathname: L/LE/LEONT/ExtUtils-Helpers-0.021.tar.gz
     provides:
@@ -698,6 +765,16 @@ DISTRIBUTIONS
       ExtUtils::MakeMaker 0
       Test::More 0.31
       Time::HiRes 0
+  Import-Into-1.002004
+    pathname: E/ET/ETHER/Import-Into-1.002004.tar.gz
+    provides:
+      Import::Into 1.002004
+    requirements:
+      ExtUtils::MakeMaker 0
+      Module::Runtime 0
+      perl 5.006
+      strict 0
+      warnings 0
   JSON-2.59
     pathname: M/MA/MAKAMAKA/JSON-2.59.tar.gz
     provides:
@@ -755,6 +832,16 @@ DISTRIBUTIONS
     requirements:
       ExtUtils::MakeMaker 0
       perl 5.006002
+  Lexical-SealRequireHints-0.007
+    pathname: Z/ZE/ZEFRAM/Lexical-SealRequireHints-0.007.tar.gz
+    provides:
+      Lexical::SealRequireHints 0.007
+    requirements:
+      Module::Build 0
+      Test::More 0
+      perl 5.006
+      strict 0
+      warnings 0
   List-MoreUtils-0.33
     pathname: A/AD/ADAMK/List-MoreUtils-0.33.tar.gz
     provides:
@@ -764,13 +851,13 @@ DISTRIBUTIONS
       ExtUtils::MakeMaker 6.52
       Test::More 0.82
       perl 5.00503
-  Module-Build-Tiny-0.028
-    pathname: L/LE/LEONT/Module-Build-Tiny-0.028.tar.gz
+  Module-Build-Tiny-0.038
+    pathname: L/LE/LEONT/Module-Build-Tiny-0.038.tar.gz
     provides:
-      DistGen 0.01
-      Module::Build::Tiny 0.028
+      Module::Build::Tiny 0.038
     requirements:
       CPAN::Meta 0
+      DynaLoader 0
       Exporter 5.57
       ExtUtils::CBuilder 0
       ExtUtils::Config 0.003
@@ -782,10 +869,10 @@ DISTRIBUTIONS
       File::Find 0
       File::Path 0
       File::Spec::Functions 0
-      Getopt::Long 0
+      Getopt::Long 2.36
       JSON::PP 2
       Pod::Man 0
-      TAP::Harness 0
+      TAP::Harness::Env 0
       perl 5.006
       strict 0
       warnings 0
@@ -810,6 +897,37 @@ DISTRIBUTIONS
       perl 5.006
       strict 0
       warnings 0
+  Moo-1.006000
+    pathname: H/HA/HAARG/Moo-1.006000.tar.gz
+    provides:
+      Method::Generate::Accessor undef
+      Method::Generate::BuildAll undef
+      Method::Generate::Constructor undef
+      Method::Generate::DemolishAll undef
+      Method::Inliner undef
+      Moo 1.006000
+      Moo::HandleMoose undef
+      Moo::HandleMoose::FakeConstructor undef
+      Moo::HandleMoose::FakeMetaClass undef
+      Moo::HandleMoose::_TypeMap undef
+      Moo::Object undef
+      Moo::Role 1.006000
+      Moo::_Utils undef
+      Moo::_mro undef
+      Moo::sification undef
+      Sub::Defer 1.006000
+      Sub::Quote 1.006000
+      oo undef
+    requirements:
+      Class::Method::Modifiers 1.1
+      Devel::GlobalDestruction 0.11
+      ExtUtils::MakeMaker 0
+      Import::Into 1.002
+      Module::Runtime 0.014
+      Role::Tiny 1.003003
+      Scalar::Util 0
+      perl 5.006
+      strictures 1.004003
   Mouse-1.12
     pathname: G/GF/GFUJI/Mouse-1.12.tar.gz
     provides:
@@ -850,6 +968,20 @@ DISTRIBUTIONS
       Test::More 0.88
       XSLoader 0.02
       perl 5.006002
+  MySQL-Warmer-0.01
+    pathname: S/SO/SONGMU/MySQL-Warmer-0.01.tar.gz
+    provides:
+      MySQL::Warmer 0.01
+      MySQL::Warmer::CLI undef
+    requirements:
+      DBI 0
+      DBIx::Inspector 0
+      Getopt::Long 0
+      Module::Build::Tiny 0.035
+      Moo 0
+      Pod::Usage 0
+      Term::ReadKey 0
+      perl 5.008001
   Net-HTTP-6.07
     pathname: M/MS/MSCHILLI/Net-HTTP-6.07.tar.gz
     provides:
@@ -1088,6 +1220,14 @@ DISTRIBUTIONS
       Proc::Wait3 0.04
     requirements:
       ExtUtils::MakeMaker 0
+  Role-Tiny-1.003003
+    pathname: H/HA/HAARG/Role-Tiny-1.003003.tar.gz
+    provides:
+      Role::Tiny 1.003003
+      Role::Tiny::With 1.003003
+    requirements:
+      Exporter 5.57
+      perl 5.006
   Router-Simple-0.15
     pathname: T/TO/TOKUHIROM/Router-Simple-0.15.tar.gz
     provides:
@@ -1159,6 +1299,13 @@ DISTRIBUTIONS
       Stream::Buffered::PerlIO undef
     requirements:
       ExtUtils::MakeMaker 6.36
+  Sub-Exporter-Progressive-0.001011
+    pathname: F/FR/FREW/Sub-Exporter-Progressive-0.001011.tar.gz
+    provides:
+      Sub::Exporter::Progressive 0.001011
+    requirements:
+      ExtUtils::MakeMaker 0
+      Test::More 0.88
   Sub-Uplevel-0.24
     pathname: D/DA/DAGOLDEN/Sub-Uplevel-0.24.tar.gz
     provides:
@@ -1173,6 +1320,12 @@ DISTRIBUTIONS
       constant 0
       strict 0
       warnings 0
+  TermReadKey-2.32
+    pathname: J/JS/JSTOWE/TermReadKey-2.32.tar.gz
+    provides:
+      Term::ReadKey 2.32
+    requirements:
+      ExtUtils::MakeMaker 0
   Test-Deep-0.110
     pathname: R/RJ/RJBS/Test-Deep-0.110.tar.gz
     provides:
@@ -1253,6 +1406,59 @@ DISTRIBUTIONS
       Test::Harness 2.03
       Test::More 0.7
       Test::Simple 0.7
+  Test-Harness-3.33
+    pathname: L/LE/LEONT/Test-Harness-3.33.tar.gz
+    provides:
+      App::Prove 3.33
+      App::Prove::State 3.33
+      App::Prove::State::Result 3.33
+      App::Prove::State::Result::Test 3.33
+      TAP::Base 3.33
+      TAP::Formatter::Base 3.33
+      TAP::Formatter::Color 3.33
+      TAP::Formatter::Console 3.33
+      TAP::Formatter::Console::ParallelSession 3.33
+      TAP::Formatter::Console::Session 3.33
+      TAP::Formatter::File 3.33
+      TAP::Formatter::File::Session 3.33
+      TAP::Formatter::Session 3.33
+      TAP::Harness 3.33
+      TAP::Harness::Env 3.33
+      TAP::Object 3.33
+      TAP::Parser 3.33
+      TAP::Parser::Aggregator 3.33
+      TAP::Parser::Grammar 3.33
+      TAP::Parser::Iterator 3.33
+      TAP::Parser::Iterator::Array 3.33
+      TAP::Parser::Iterator::Process 3.33
+      TAP::Parser::Iterator::Stream 3.33
+      TAP::Parser::IteratorFactory 3.33
+      TAP::Parser::Multiplexer 3.33
+      TAP::Parser::Result 3.33
+      TAP::Parser::Result::Bailout 3.33
+      TAP::Parser::Result::Comment 3.33
+      TAP::Parser::Result::Plan 3.33
+      TAP::Parser::Result::Pragma 3.33
+      TAP::Parser::Result::Test 3.33
+      TAP::Parser::Result::Unknown 3.33
+      TAP::Parser::Result::Version 3.33
+      TAP::Parser::Result::YAML 3.33
+      TAP::Parser::ResultFactory 3.33
+      TAP::Parser::Scheduler 3.33
+      TAP::Parser::Scheduler::Job 3.33
+      TAP::Parser::Scheduler::Spinner 3.33
+      TAP::Parser::Source 3.33
+      TAP::Parser::SourceHandler 3.33
+      TAP::Parser::SourceHandler::Executable 3.33
+      TAP::Parser::SourceHandler::File 3.33
+      TAP::Parser::SourceHandler::Handle 3.33
+      TAP::Parser::SourceHandler::Perl 3.33
+      TAP::Parser::SourceHandler::RawTAP 3.33
+      TAP::Parser::YAMLish::Reader 3.33
+      TAP::Parser::YAMLish::Writer 3.33
+      Test::Harness 3.33
+    requirements:
+      ExtUtils::MakeMaker 0
   Test-NoWarnings-1.04
     pathname: A/AD/ADAMK/Test-NoWarnings-1.04.tar.gz
     provides:
@@ -1500,12 +1706,35 @@ DISTRIBUTIONS
       Fcntl 0
       URI 1.10
       perl 5.008001
+  bareword-filehandles-0.003
+    pathname: I/IL/ILMARI/bareword-filehandles-0.003.tar.gz
+    provides:
+      bareword::filehandles 0.003
+      inc::BarewordFilehandlesMakeMaker undef
+    requirements:
+      B::Hooks::OP::Check 0
+      ExtUtils::Depends 0
+      ExtUtils::MakeMaker 6.31
+      Lexical::SealRequireHints 0
+      Test::More 0.88
+      XSLoader 0
   common-sense-3.72
     pathname: M/ML/MLEHMANN/common-sense-3.72.tar.gz
     provides:
       common::sense 3.72
     requirements:
       ExtUtils::MakeMaker 0
+  indirect-0.32
+    pathname: V/VP/VPIT/indirect-0.32.tar.gz
+    provides:
+      indirect 0.32
+    requirements:
+      Carp 0
+      Config 0
+      ExtUtils::MakeMaker 0
+      Test::More 0
+      XSLoader 0
+      perl 5.008001
   libwww-perl-6.08
     pathname: M/MS/MSCHILLI/libwww-perl-6.08.tar.gz
     provides:
@@ -1561,3 +1790,28 @@ DISTRIBUTIONS
       URI::Escape 0
       WWW::RobotRules 6
       perl 5.008001
+  multidimensional-0.011
+    pathname: I/IL/ILMARI/multidimensional-0.011.tar.gz
+    provides:
+      MyTest undef
+      inc::MultidimensionalMakeMaker undef
+      multidimensional 0.011
+    requirements:
+      B::Hooks::OP::Check 0.19
+      CPAN::Meta 2.112580
+      ExtUtils::Depends 0
+      ExtUtils::MakeMaker 6.30
+      Lexical::SealRequireHints 0.005
+      Test::More 0.88
+      XSLoader 0
+      strict 0
+      warnings 0
+  strictures-1.005005
+    pathname: H/HA/HAARG/strictures-1.005005.tar.gz
+    provides:
+      strictures 1.005005
+    requirements:
+      bareword::filehandles 0
+      indirect 0
+      multidimensional 0
+      perl 5.006

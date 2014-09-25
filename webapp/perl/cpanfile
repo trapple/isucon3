@@ -15,3 +15,5 @@ requires "DDP";
 requires "DBIx::QueryLog";
 requires "Text::Markdown";
 requires "Text::Markdown::Discount";
+
+requires "MySQL::Warmer";
